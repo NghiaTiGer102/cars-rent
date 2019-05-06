@@ -1,0 +1,116 @@
+﻿@{
+    ViewBag.Title = "Quản lý thuê xe";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@Html.Partial("~/Views/Shared/_PartialBreadcrumbs.cshtml", "Quản lý thuê xe")
+<div class="content">
+    <div class="animated fadeIn">
+        <div class="buttons">
+            <!-- Left Block -->
+            <div class="row bg-white">
+                <div class="container">
+                    <div class="row">
+                    </div>
+                    <div class="dropdown float-right trangthai">
+                        <select name="select" id="select" class="form-control">
+                            <option value="0">Trạng thái xe</option>
+                            <option value="1">Chưa thuê</option>
+                            <option value="2">Đã thuê</option>
+                            <option value="3">Hoạt đông</option>
+                        </select>
+                    </div>
+
+                    <div class="both"></div>
+
+                    <div class="search mt-3">
+                        <input class="form-control float-right" id="myInput" type="text" placeholder="Search.." width="18" /><div class="dropdown float-right  mr-3">
+                            <select name="select" id="select" class="form-control">
+                                <option value="0">Hãng xe</option>
+                                <option value="1">Yamaha</option>
+                                <option value="2">HonDa</option>
+                                <option value="3">Suzuki</option>
+                            </select>
+                        </div>
+
+
+                        <div class="dropdown float-right  mr-3">
+                            <select name="select" id="select" class="form-control">
+                                <option value="0">Loại xe</option>
+                                <option value="1">4 chổ</option>
+                                <option value="2">16 chổ</option>
+                                <option value="3">30 chổ</option>
+                            </select>
+                        </div>
+
+
+
+
+                    </div>
+
+                </div>
+
+                <div class="container noidung">
+                    <table class="table table-striped table-bordered" id="dataTable">
+                        <thead>
+                            <tr>
+                                <th>STT</th>
+                                <th>Mã số xe</th>
+                                <th>Tên xe</th>
+                                <th>Loại xe</th>
+                                <th>Hãng xe</th>
+                                <th>Màu xe</th>
+                                <th>Hình ảnh xe</th>
+                                <th>Ngày nhập</th>
+                                <th>Giá cho thuê</th>
+                                <th>Tình trạng xe</th>
+                                <th>Tình trạng cho thuê</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>Camry</td>
+                                <td>Toyota</td>
+                                <td>Du lịch</td>
+                                <td>Den</td>
+                                <td><img src="xe.jpg"></td>
+                                <td>1/1/2019</td>
+                                <td>1000tr/ngày</td>
+                                <td class="text-success">  Hoạt động</td>
+                                <td class="text-success"><a href="ThueXe.html">Chưa</a></td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>2</td>
+                                <td>Camry</td>
+                                <td>Toyota</td>
+                                <td>Du lịch</td>
+                                <td>Den</td>
+                                <td><img src="xe.jpg"></td>
+                                <td>1/1/2019</td>
+                                <td>1000tr/ngày</td>
+                                <td class="text-success">Hoạt động</td>
+                                <td class="text-success"><a href="ThueXe.html">Chưa</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+
+
+
+            </div><!-- .row -->
+        </div> <!-- .buttons -->
+    </div><!-- .animated -->
+</div>
+
+<script>
+    (function ($) {
+        $(document).ready(function () {
+            $('.datepicker').datepicker();
+            $('#dataTable').DataTable();
+        });
+    })(jQuery);
+</script>

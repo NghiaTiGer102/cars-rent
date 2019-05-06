@@ -1,0 +1,481 @@
+﻿
+@{
+    ViewBag.Title = "Quản lý nhân viên";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@Html.Partial("~/Views/Shared/_PartialBreadcrumbs.cshtml", "Quản lý nhân viên")
+<div class="content">
+    <div class="animated fadeIn">
+        <div class="row">
+
+            <div class="col-sm-6">
+
+
+            </div>
+            <div class="col-sm-2 text-right">
+                <button type="button" class="btn btn-outline-link btn-sm"> <span class="ti-angle-left"></span> </button>
+                <button type="button" class="btn btn-outline-link btn-sm"> <span class="ti-angle-right"></span> </button>
+            </div>
+
+            <div class="col-sm-4">
+
+                <div class="input-group">
+                    <div class="input-group-addon"><i class="fa fa-calendar"></i></div>
+                    <input class="form-control datepicker">
+                </div>
+
+            </div>
+
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-header">
+                        <strong class="card-title">Phân chia lịch Nhân Viên</strong>
+                    </div>
+                    <div class="table-stats order-table ov-h">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th class="serial padding-none">#</th>
+
+                                    <th class="padding-none text-center">Name</th>
+                                    <th class="padding-none text-center">
+                                        01/01/2019
+                                        <button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#scrollmodal"><i class="fa fa-plus-square-o"></i></button>
+
+                                    </th>
+                                    <th class="padding-none text-center">
+                                        02/01/2019
+                                        <button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#scrollmodal"><i class="fa fa-plus-square-o"></i></button>
+                                    </th>
+                                    <th class="padding-none text-center">
+                                        03/01/2019
+                                        <button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#scrollmodal"><i class="fa fa-plus-square-o"></i></button>
+                                    </th>
+                                    <th class="padding-none text-center">
+                                        03/01/2019
+                                        <button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#scrollmodal"><i class="fa fa-plus-square-o"></i></button>
+                                    </th>
+                                    <th class="padding-none text-center">
+                                        04/01/2019
+                                        <button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#scrollmodal"><i class="fa fa-plus-square-o"></i></button>
+                                    </th>
+                                    <th class="padding-none text-center">
+                                        05/01/2019
+                                        <button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#scrollmodal"><i class="fa fa-plus-square-o"></i></button>
+                                    </th>
+                                    <th class="padding-none text-center">
+                                        06/01/2019
+                                        <button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#scrollmodal"><i class="fa fa-plus-square-o"></i></button>
+                                    </th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="serial">1.</td>
+
+                                    <td> Nguyễn Văn A </td>
+
+
+                                    <td class="padding-none">
+                                        <p class="text-center">
+                                            <span class="badge badge-complete">09:00 - 12:30</span>
+                                        </p>
+                                        <p class="text-center">
+                                            <span class="badge badge-primary"> 12:30 - 17:30</span>
+                                        </p>
+                                    </td>
+                                    <td class="padding-none">
+                                        <p class="text-center">
+                                            <span class="badge badge-complete">09:00 - 12:30</span>
+                                        </p>
+                                        <p class="text-center">
+                                            <span class="badge badge-primary"> 12:30 - 17:30</span>
+                                        </p>
+                                    </td>
+                                    <td class="padding-none">
+                                        <p class="text-center">
+                                            <span class="badge badge-complete">09:00 - 12:30</span>
+                                        </p>
+                                        <p class="text-center">
+                                            <span class="badge badge-primary"> 12:30 - 17:30</span>
+                                        </p>
+                                    </td>
+                                    <td class="padding-none">
+                                        <p class="text-center">
+                                            <span class="badge badge-complete">09:00 - 12:30</span>
+                                        </p>
+                                        <p class="text-center">
+                                            <span class="badge badge-primary"> 12:30 - 17:30</span>
+                                        </p>
+                                    </td>
+                                    <td class="padding-none">
+                                        <p class="text-center">
+                                            <span class="badge badge-complete">09:00 - 12:30</span>
+                                        </p>
+                                        <p class="text-center">
+                                            <span class="badge badge-primary"> 12:30 - 17:30</span>
+                                        </p>
+                                    </td>
+                                    <td class="padding-none text-center">
+                                        <button type="button" class="btn btn-outline-success btn-sm" data-toggle="modal" data-target="#scrollmodal2"><i class="fa fa-plus-square-o"></i></button>
+                                    </td>
+                                    <td class="padding-none text-center">
+                                        <button type="button" class="btn btn-outline-success btn-sm" data-toggle="modal" data-target="#scrollmodal2"><i class="fa fa-plus-square-o"></i></button>
+                                    </td>
+
+
+
+                                </tr>
+                                <tr>
+                                    <td class="serial">2.</td>
+
+                                    <td> Nguyễn Văn A </td>
+
+
+                                    <td class="padding-none">
+                                        <p class="text-center">
+                                            <span class="badge badge-complete">09:00 - 12:30</span>
+                                        </p>
+                                        <p class="text-center">
+                                            <span class="badge badge-primary"> 12:30 - 17:30</span>
+                                        </p>
+                                    </td>
+                                    <td class="padding-none">
+                                        <p class="text-center">
+                                            <span class="badge badge-complete">09:00 - 12:30</span>
+                                        </p>
+                                        <p class="text-center">
+                                            <span class="badge badge-primary"> 12:30 - 17:30</span>
+                                        </p>
+                                    </td>
+                                    <td class="padding-none">
+                                        <p class="text-center">
+                                            <span class="badge badge-complete">09:00 - 12:30</span>
+                                        </p>
+                                        <p class="text-center">
+                                            <span class="badge badge-primary"> 12:30 - 17:30</span>
+                                        </p>
+                                    </td>
+                                    <td class="padding-none">
+                                        <p class="text-center">
+                                            <span class="badge badge-complete">09:00 - 12:30</span>
+                                        </p>
+                                        <p class="text-center">
+                                            <span class="badge badge-primary"> 12:30 - 17:30</span>
+                                        </p>
+                                    </td>
+                                    <td class="padding-none">
+                                        <p class="text-center">
+                                            <span class="badge badge-complete">09:00 - 12:30</span>
+                                        </p>
+                                        <p class="text-center">
+                                            <span class="badge badge-primary"> 12:30 - 17:30</span>
+                                        </p>
+                                    </td>
+                                    <td class="padding-none text-center">
+                                        <button type="button" class="btn btn-outline-success btn-sm" data-toggle="modal" data-target="#scrollmodal2"><i class="fa fa-plus-square-o"></i></button>
+                                    </td>
+                                    <td class="padding-none text-center">
+                                        <button type="button" class="btn btn-outline-success btn-sm" data-toggle="modal" data-target="#scrollmodal2"><i class="fa fa-plus-square-o"></i></button>
+                                    </td>
+
+
+
+                                </tr>
+                                <tr>
+                                    <td class="serial">3.</td>
+
+                                    <td> Nguyễn Văn A </td>
+
+
+                                    <td class="padding-none">
+                                        <p class="text-center">
+                                            <span class="badge badge-complete">09:00 - 12:30</span>
+                                        </p>
+                                        <p class="text-center">
+                                            <span class="badge badge-primary"> 12:30 - 17:30</span>
+                                        </p>
+                                    </td>
+                                    <td class="padding-none">
+                                        <p class="text-center">
+                                            <span class="badge badge-complete">09:00 - 12:30</span>
+                                        </p>
+                                        <p class="text-center">
+                                            <span class="badge badge-primary"> 12:30 - 17:30</span>
+                                        </p>
+                                    </td>
+                                    <td class="padding-none">
+                                        <p class="text-center">
+                                            <span class="badge badge-complete">09:00 - 12:30</span>
+                                        </p>
+                                        <p class="text-center">
+                                            <span class="badge badge-primary"> 12:30 - 17:30</span>
+                                        </p>
+                                    </td>
+                                    <td class="padding-none">
+                                        <p class="text-center">
+                                            <span class="badge badge-complete">09:00 - 12:30</span>
+                                        </p>
+                                        <p class="text-center">
+                                            <span class="badge badge-primary"> 12:30 - 17:30</span>
+                                        </p>
+                                    </td>
+                                    <td class="padding-none">
+                                        <p class="text-center">
+                                            <span class="badge badge-complete">09:00 - 12:30</span>
+                                        </p>
+                                        <p class="text-center">
+                                            <span class="badge badge-primary"> 12:30 - 17:30</span>
+                                        </p>
+                                    </td>
+                                    <td class="padding-none text-center">
+                                        <button type="button" class="btn btn-outline-success btn-sm" data-toggle="modal" data-target="#scrollmodal2"><i class="fa fa-plus-square-o"></i></button>
+                                    </td>
+                                    <td class="padding-none text-center">
+                                        <button type="button" class="btn btn-outline-success btn-sm" data-toggle="modal" data-target="#scrollmodal2"><i class="fa fa-plus-square-o"></i></button>
+                                    </td>
+
+
+
+                                </tr>
+                                <tr>
+                                    <td class="serial">4.</td>
+
+                                    <td> Nguyễn Văn A </td>
+
+
+                                    <td class="padding-none">
+                                        <p class="text-center">
+                                            <span class="badge badge-complete">09:00 - 12:30</span>
+                                        </p>
+                                        <p class="text-center">
+                                            <span class="badge badge-primary"> 12:30 - 17:30</span>
+                                        </p>
+                                    </td>
+                                    <td class="padding-none">
+                                        <p class="text-center">
+                                            <span class="badge badge-complete">09:00 - 12:30</span>
+                                        </p>
+                                        <p class="text-center">
+                                            <span class="badge badge-primary"> 12:30 - 17:30</span>
+                                        </p>
+                                    </td>
+                                    <td class="padding-none">
+                                        <p class="text-center">
+                                            <span class="badge badge-complete">09:00 - 12:30</span>
+                                        </p>
+                                        <p class="text-center">
+                                            <span class="badge badge-primary"> 12:30 - 17:30</span>
+                                        </p>
+                                    </td>
+                                    <td class="padding-none">
+                                        <p class="text-center">
+                                            <span class="badge badge-complete">09:00 - 12:30</span>
+                                        </p>
+                                        <p class="text-center">
+                                            <span class="badge badge-primary"> 12:30 - 17:30</span>
+                                        </p>
+                                    </td>
+                                    <td class="padding-none">
+                                        <p class="text-center">
+                                            <span class="badge badge-complete">09:00 - 12:30</span>
+                                        </p>
+                                        <p class="text-center">
+                                            <span class="badge badge-primary"> 12:30 - 17:30</span>
+                                        </p>
+                                    </td>
+                                    <td class="padding-none text-center">
+                                        <button type="button" class="btn btn-outline-success btn-sm" data-toggle="modal" data-target="#scrollmodal2"><i class="fa fa-plus-square-o"></i></button>
+                                    </td>
+                                    <td class="padding-none text-center">
+                                        <button type="button" class="btn btn-outline-success btn-sm" data-toggle="modal" data-target="#scrollmodal2"><i class="fa fa-plus-square-o"></i></button>
+                                    </td>
+
+
+
+                                </tr>
+                                <tr>
+                                    <td class="serial">5.</td>
+
+                                    <td> Nguyễn Văn A </td>
+
+
+                                    <td class="padding-none">
+                                        <p class="text-center">
+                                            <span class="badge badge-complete">09:00 - 12:30</span>
+                                        </p>
+                                        <p class="text-center">
+                                            <span class="badge badge-primary"> 12:30 - 17:30</span>
+                                        </p>
+                                    </td>
+                                    <td class="padding-none">
+                                        <p class="text-center">
+                                            <span class="badge badge-complete">09:00 - 12:30</span>
+                                        </p>
+                                        <p class="text-center">
+                                            <span class="badge badge-primary"> 12:30 - 17:30</span>
+                                        </p>
+                                    </td>
+                                    <td class="padding-none">
+                                        <p class="text-center">
+                                            <span class="badge badge-complete">09:00 - 12:30</span>
+                                        </p>
+                                        <p class="text-center">
+                                            <span class="badge badge-primary"> 12:30 - 17:30</span>
+                                        </p>
+                                    </td>
+                                    <td class="padding-none">
+                                        <p class="text-center">
+                                            <span class="badge badge-complete">09:00 - 12:30</span>
+                                        </p>
+                                        <p class="text-center">
+                                            <span class="badge badge-primary"> 12:30 - 17:30</span>
+                                        </p>
+                                    </td>
+                                    <td class="padding-none">
+                                        <p class="text-center">
+                                            <span class="badge badge-complete">09:00 - 12:30</span>
+                                        </p>
+                                        <p class="text-center">
+                                            <span class="badge badge-primary"> 12:30 - 17:30</span>
+                                        </p>
+                                    </td>
+                                    <td class="padding-none text-center">
+                                        <button type="button" class="btn btn-outline-success btn-sm" data-toggle="modal" data-target="#scrollmodal2"><i class="fa fa-plus-square-o"></i></button>
+                                    </td>
+                                    <td class="padding-none text-center">
+                                        <button type="button" class="btn btn-outline-success btn-sm" data-toggle="modal" data-target="#scrollmodal2"><i class="fa fa-plus-square-o"></i></button>
+                                    </td>
+
+
+
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div> <!-- /.table-stats -->
+                </div>
+            </div>
+        </div>
+
+    </div><!-- .animated -->
+    <!--Start popup -->
+    <div class="modal fade" id="scrollmodal" tabindex="-1" role="dialog" aria-labelledby="scrollmodalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="scrollmodalLabel">Xếp lịch - Ngày 01/01/2019 - Nhân viên</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <label> Danh sách nhân viên</label>
+                            <section class="card">
+                                <div class="card-header">
+                                    <label class="switch switch-text switch-primary"><input type="checkbox" class="switch-input" checked="checked"> <span data-on="On" data-off="Off" class="switch-label"></span> <span class="switch-handle"> Chọn tất cả</span></label>
+                                </div>
+
+                                <ul style="height:350px !important;overflow: auto" class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                        <label class="switch switch-text switch-primary"><input type="checkbox" class="switch-input" checked="checked"> <span data-on="On" data-off="Off" class="switch-label"></span> <span class="switch-handle"> Nguyễn Văn A</span></label>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <label class="switch switch-text switch-primary"><input type="checkbox" class="switch-input" checked="checked"> <span data-on="On" data-off="Off" class="switch-label"></span> <span class="switch-handle"> Nguyễn Văn B</span></label>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <label class="switch switch-text switch-primary"><input type="checkbox" class="switch-input" checked="checked"> <span data-on="On" data-off="Off" class="switch-label"></span> <span class="switch-handle"> Nguyễn Văn C</span></label>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <label class="switch switch-text switch-primary"><input type="checkbox" class="switch-input" checked="checked"> <span data-on="On" data-off="Off" class="switch-label"></span> <span class="switch-handle"> Nguyễn Văn D</span></label>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <label class="switch switch-text switch-primary"><input type="checkbox" class="switch-input" checked="checked"> <span data-on="On" data-off="Off" class="switch-label"></span> <span class="switch-handle"> Nguyễn Văn E</span></label>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <label class="switch switch-text switch-primary"><input type="checkbox" class="switch-input" checked="checked"> <span data-on="On" data-off="Off" class="switch-label"></span> <span class="switch-handle"> Nguyễn Văn E</span></label>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <label class="switch switch-text switch-primary"><input type="checkbox" class="switch-input" checked="checked"> <span data-on="On" data-off="Off" class="switch-label"></span> <span class="switch-handle"> Nguyễn Văn E</span></label>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <label class="switch switch-text switch-primary"><input type="checkbox" class="switch-input" checked="checked"> <span data-on="On" data-off="Off" class="switch-label"></span> <span class="switch-handle"> Nguyễn Văn E</span></label>
+                                    </li>
+
+                                </ul>
+                            </section>
+                        </div>
+                        <div class="col-sm-6">
+                            <label>Chọn ca làm việc</label>
+                            <div class="dropdown show">
+                                <a class="btn btn-secondary dropdown-toggle" href="https://example.com" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Ca làm việc
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                    <a class="dropdown-item" href="#">Action</a>
+                                    <a class="dropdown-item" href="#">Another action</a>
+                                    <a class="dropdown-item" href="#">Something else here</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+                    <button type="button" class="btn btn-primary">Lưu</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="scrollmodal2" tabindex="-1" role="dialog" aria-labelledby="scrollmodalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="scrollmodalLabel">Xếp lịch - Ngày 01/01/2019 - Nhân viên Nguyễn Văn A</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+
+                        <div class="col-sm-6">
+                            <label>Chọn ca làm việc</label>
+                            <div class="dropdown show">
+                                <a class="btn btn-secondary dropdown-toggle" href="https://example.com" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Ca làm việc
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                    <a class="dropdown-item" href="#">Action</a>
+                                    <a class="dropdown-item" href="#">Another action</a>
+                                    <a class="dropdown-item" href="#">Something else here</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+                    <button type="button" class="btn btn-primary">Lưu</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End popup-->
+</div>
+<script>
+    (function ($) {
+        $(document).ready(function () {
+            $('.datepicker').datepicker();
+            $('#dataTable').DataTable();
+        });
+    })(jQuery);
+</script>

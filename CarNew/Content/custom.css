@@ -1,0 +1,8 @@
+.padding-none{
+	padding: 2px !important;
+}
+
+.ttable{
+	overflow: scroll !important; /* Scrollbar are always visible */
+	overflow: auto !important;  
+}

@@ -1,0 +1,88 @@
+﻿
+@{
+    ViewBag.Title = "Quản lý bảo dưỡng xe";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@Html.Partial("~/Views/Shared/_PartialBreadcrumbs.cshtml", "Quản lý thuê xe")
+<div class="content">
+    <div class="row">
+        <div class="col-sm-10">
+            <div class="card">
+                <div class="card-header">
+                    <strong style="color: #0099ff" class="card-title mb-3">Porsche Panamera 4S đời 2018</strong>
+                    <br>
+                    <label>Loại xe du lịch</label>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <img src="xe.jpg">
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="col-sm-6">
+
+                        <br>
+                        <p>Giá thuê: 1tr/ ngày</p>
+
+                        <p>Mã số: 123456</p>
+                        <p>Số Km: 1000</p>
+                        <p>Xuất xứ: Việt Nam</p>
+                        <p>Năm sản xuất 2018</p>
+                        <p>Đời xe: 2018</p>
+                        <p>Kiểu dáng: Sedan</p>
+                        <p>Hộp số: tự động</p>
+                        <p>Màu xe: Đen</p>
+
+
+
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <p>Xe hỏng kính -> 300k</p>
+                                        <p>Thay bánh xe 3 bánh -> 400k</p>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <select name="select" id="select" class="form-control">
+                                            <option value="0">Trạng thái xe</option>
+                                            <option value="1">Option #1</option>
+                                            <option value="2">Option #2</option>
+                                            <option value="3">Option #3</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+
+                                <div class="row">
+                                    <div class="col-sm-6">
+
+                                    </div>
+                                    <div class="col-sm-6 text-right">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal"><a href="QuanLyBaoDuong.html">Hủy</a> </button>
+                                        <button type="button" class="btn btn-primary"> <a href="QuanLyBaoDuong.html">Cập nhập</a>  </button>
+                                    </div>
+
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

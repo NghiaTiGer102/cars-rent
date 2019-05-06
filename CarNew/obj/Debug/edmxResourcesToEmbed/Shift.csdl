@@ -1,0 +1,375 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ShiftModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="tb_Car">
+    <Key>
+      <PropertyRef Name="IDCar" />
+    </Key>
+    <Property Name="IDCar" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CarName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Price" Type="Int64" />
+    <Property Name="RentPrice" Type="Int64" />
+    <Property Name="KmRun" Type="Int32" />
+    <Property Name="Year" Type="DateTime" Precision="3" />
+    <Property Name="ColorID" Type="Int32" />
+    <Property Name="FeaturesID" Type="Int32" />
+    <Property Name="StyleID" Type="Int32" />
+    <Property Name="MakeID" Type="Int32" />
+    <Property Name="FuelID" Type="Int32" />
+    <Property Name="DriveTrainID" Type="Int32" />
+    <Property Name="MaintenanceDate" Type="DateTime" Precision="3" />
+    <Property Name="IDStatus" Type="Int32" />
+    <Property Name="Accessories" Type="Int32" />
+    <Property Name="RepairList" Type="Int32" />
+    <NavigationProperty Name="tb_Status" Relationship="Self.FK_tb_Car_tb_Car" FromRole="tb_Car" ToRole="tb_Status" />
+    <NavigationProperty Name="tb_Color" Relationship="Self.FK_tb_Car_tb_Color" FromRole="tb_Car" ToRole="tb_Color" />
+    <NavigationProperty Name="tb_DriveTrain" Relationship="Self.FK_tb_Car_tb_DriveTrain" FromRole="tb_Car" ToRole="tb_DriveTrain" />
+    <NavigationProperty Name="tb_Features" Relationship="Self.FK_tb_Car_tb_Features" FromRole="tb_Car" ToRole="tb_Features" />
+    <NavigationProperty Name="tb_FuelStyle" Relationship="Self.FK_tb_Car_tb_FuelStyle" FromRole="tb_Car" ToRole="tb_FuelStyle" />
+    <NavigationProperty Name="tb_Make" Relationship="Self.FK_tb_Car_tb_Make" FromRole="tb_Car" ToRole="tb_Make" />
+    <NavigationProperty Name="tb_RepairList" Relationship="Self.FK_tb_Car_tb_RepairList" FromRole="tb_Car" ToRole="tb_RepairList" />
+    <NavigationProperty Name="tb_Style" Relationship="Self.FK_tb_Car_tb_Style" FromRole="tb_Car" ToRole="tb_Style" />
+    <NavigationProperty Name="tb_Contract" Relationship="Self.FK_tb_Contract_tb_Car" FromRole="tb_Car" ToRole="tb_Contract" />
+  </EntityType>
+  <EntityType Name="tb_Color">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tb_Car" Relationship="Self.FK_tb_Car_tb_Color" FromRole="tb_Color" ToRole="tb_Car" />
+  </EntityType>
+  <EntityType Name="tb_Contract">
+    <Key>
+      <PropertyRef Name="IDContract" />
+    </Key>
+    <Property Name="IDContract" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Customer" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Adress" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CMND" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Deposit" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DateRent" Type="DateTime" Precision="3" />
+    <Property Name="DateReturn" Type="DateTime" Precision="3" />
+    <Property Name="IDUserCreate" Type="Int64" Nullable="false" />
+    <Property Name="IDCar" Type="Int64" Nullable="false" />
+    <NavigationProperty Name="tb_Car" Relationship="Self.FK_tb_Contract_tb_Car" FromRole="tb_Contract" ToRole="tb_Car" />
+  </EntityType>
+  <EntityType Name="tb_DriveTrain">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tb_Car" Relationship="Self.FK_tb_Car_tb_DriveTrain" FromRole="tb_DriveTrain" ToRole="tb_Car" />
+  </EntityType>
+  <EntityType Name="tb_Features">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tb_Car" Relationship="Self.FK_tb_Car_tb_Features" FromRole="tb_Features" ToRole="tb_Car" />
+  </EntityType>
+  <EntityType Name="tb_FuelStyle">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tb_Car" Relationship="Self.FK_tb_Car_tb_FuelStyle" FromRole="tb_FuelStyle" ToRole="tb_Car" />
+  </EntityType>
+  <EntityType Name="tb_Make">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tb_Car" Relationship="Self.FK_tb_Car_tb_Make" FromRole="tb_Make" ToRole="tb_Car" />
+  </EntityType>
+  <EntityType Name="tb_Permision">
+    <Key>
+      <PropertyRef Name="IDPermision" />
+    </Key>
+    <Property Name="IDPermision" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tb_User" Relationship="Self.FK_tb_User_tb_Permision" FromRole="tb_Permision" ToRole="tb_User" />
+  </EntityType>
+  <EntityType Name="tb_RepairList">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tb_Car" Relationship="Self.FK_tb_Car_tb_RepairList" FromRole="tb_RepairList" ToRole="tb_Car" />
+  </EntityType>
+  <EntityType Name="tb_Shift">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="From" Type="Int32" />
+    <Property Name="To" Type="Int32" />
+    <NavigationProperty Name="tb_Timetable" Relationship="Self.FK_tb_Timetable_tb_Shift1" FromRole="tb_Shift" ToRole="tb_Timetable" />
+  </EntityType>
+  <EntityType Name="tb_Status">
+    <Key>
+      <PropertyRef Name="IDStatus" />
+    </Key>
+    <Property Name="IDStatus" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StatusName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tb_Car" Relationship="Self.FK_tb_Car_tb_Car" FromRole="tb_Status" ToRole="tb_Car" />
+  </EntityType>
+  <EntityType Name="tb_Style">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tb_Car" Relationship="Self.FK_tb_Car_tb_Style" FromRole="tb_Style" ToRole="tb_Car" />
+  </EntityType>
+  <EntityType Name="tb_Timetable">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="IDUser" />
+      <PropertyRef Name="Datetime" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IDUser" Type="Int64" Nullable="false" />
+    <Property Name="Datetime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="IDShift" Type="Int64" />
+    <NavigationProperty Name="tb_Shift" Relationship="Self.FK_tb_Timetable_tb_Shift1" FromRole="tb_Timetable" ToRole="tb_Shift" />
+    <NavigationProperty Name="tb_User" Relationship="Self.FK_tb_Timetable_tb_User" FromRole="tb_Timetable" ToRole="tb_User" />
+  </EntityType>
+  <EntityType Name="tb_User">
+    <Key>
+      <PropertyRef Name="IDUser" />
+    </Key>
+    <Property Name="IDUser" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Username" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IDPermision" Type="Int64" />
+    <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tb_Permision" Relationship="Self.FK_tb_User_tb_Permision" FromRole="tb_User" ToRole="tb_Permision" />
+    <NavigationProperty Name="tb_Timetable" Relationship="Self.FK_tb_Timetable_tb_User" FromRole="tb_User" ToRole="tb_Timetable" />
+  </EntityType>
+  <Association Name="FK_tb_Car_tb_Car">
+    <End Role="tb_Status" Type="Self.tb_Status" Multiplicity="0..1" />
+    <End Role="tb_Car" Type="Self.tb_Car" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_Status">
+        <PropertyRef Name="IDStatus" />
+      </Principal>
+      <Dependent Role="tb_Car">
+        <PropertyRef Name="IDStatus" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tb_Car_tb_Color">
+    <End Role="tb_Color" Type="Self.tb_Color" Multiplicity="0..1" />
+    <End Role="tb_Car" Type="Self.tb_Car" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_Color">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tb_Car">
+        <PropertyRef Name="ColorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tb_Car_tb_DriveTrain">
+    <End Role="tb_DriveTrain" Type="Self.tb_DriveTrain" Multiplicity="0..1" />
+    <End Role="tb_Car" Type="Self.tb_Car" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_DriveTrain">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tb_Car">
+        <PropertyRef Name="DriveTrainID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tb_Car_tb_Features">
+    <End Role="tb_Features" Type="Self.tb_Features" Multiplicity="0..1" />
+    <End Role="tb_Car" Type="Self.tb_Car" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_Features">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tb_Car">
+        <PropertyRef Name="FeaturesID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tb_Car_tb_FuelStyle">
+    <End Role="tb_FuelStyle" Type="Self.tb_FuelStyle" Multiplicity="0..1" />
+    <End Role="tb_Car" Type="Self.tb_Car" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_FuelStyle">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tb_Car">
+        <PropertyRef Name="FuelID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tb_Car_tb_Make">
+    <End Role="tb_Make" Type="Self.tb_Make" Multiplicity="0..1" />
+    <End Role="tb_Car" Type="Self.tb_Car" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_Make">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tb_Car">
+        <PropertyRef Name="MakeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tb_Car_tb_RepairList">
+    <End Role="tb_RepairList" Type="Self.tb_RepairList" Multiplicity="0..1" />
+    <End Role="tb_Car" Type="Self.tb_Car" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_RepairList">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tb_Car">
+        <PropertyRef Name="RepairList" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tb_Car_tb_Style">
+    <End Role="tb_Style" Type="Self.tb_Style" Multiplicity="0..1" />
+    <End Role="tb_Car" Type="Self.tb_Car" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_Style">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tb_Car">
+        <PropertyRef Name="StyleID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tb_Contract_tb_Car">
+    <End Role="tb_Car" Type="Self.tb_Car" Multiplicity="1" />
+    <End Role="tb_Contract" Type="Self.tb_Contract" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_Car">
+        <PropertyRef Name="IDCar" />
+      </Principal>
+      <Dependent Role="tb_Contract">
+        <PropertyRef Name="IDCar" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tb_User_tb_Permision">
+    <End Role="tb_Permision" Type="Self.tb_Permision" Multiplicity="0..1" />
+    <End Role="tb_User" Type="Self.tb_User" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_Permision">
+        <PropertyRef Name="IDPermision" />
+      </Principal>
+      <Dependent Role="tb_User">
+        <PropertyRef Name="IDPermision" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tb_Timetable_tb_Shift1">
+    <End Role="tb_Shift" Type="Self.tb_Shift" Multiplicity="0..1" />
+    <End Role="tb_Timetable" Type="Self.tb_Timetable" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_Shift">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tb_Timetable">
+        <PropertyRef Name="IDShift" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tb_Timetable_tb_User">
+    <End Role="tb_User" Type="Self.tb_User" Multiplicity="1" />
+    <End Role="tb_Timetable" Type="Self.tb_Timetable" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_User">
+        <PropertyRef Name="IDUser" />
+      </Principal>
+      <Dependent Role="tb_Timetable">
+        <PropertyRef Name="IDUser" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ShiftEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+    <EntitySet Name="tb_Car" EntityType="Self.tb_Car" />
+    <EntitySet Name="tb_Color" EntityType="Self.tb_Color" />
+    <EntitySet Name="tb_Contract" EntityType="Self.tb_Contract" />
+    <EntitySet Name="tb_DriveTrain" EntityType="Self.tb_DriveTrain" />
+    <EntitySet Name="tb_Features" EntityType="Self.tb_Features" />
+    <EntitySet Name="tb_FuelStyle" EntityType="Self.tb_FuelStyle" />
+    <EntitySet Name="tb_Make" EntityType="Self.tb_Make" />
+    <EntitySet Name="tb_Permision" EntityType="Self.tb_Permision" />
+    <EntitySet Name="tb_RepairList" EntityType="Self.tb_RepairList" />
+    <EntitySet Name="tb_Shift" EntityType="Self.tb_Shift" />
+    <EntitySet Name="tb_Status" EntityType="Self.tb_Status" />
+    <EntitySet Name="tb_Style" EntityType="Self.tb_Style" />
+    <EntitySet Name="tb_Timetable" EntityType="Self.tb_Timetable" />
+    <EntitySet Name="tb_User" EntityType="Self.tb_User" />
+    <AssociationSet Name="FK_tb_Car_tb_Car" Association="Self.FK_tb_Car_tb_Car">
+      <End Role="tb_Status" EntitySet="tb_Status" />
+      <End Role="tb_Car" EntitySet="tb_Car" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tb_Car_tb_Color" Association="Self.FK_tb_Car_tb_Color">
+      <End Role="tb_Color" EntitySet="tb_Color" />
+      <End Role="tb_Car" EntitySet="tb_Car" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tb_Car_tb_DriveTrain" Association="Self.FK_tb_Car_tb_DriveTrain">
+      <End Role="tb_DriveTrain" EntitySet="tb_DriveTrain" />
+      <End Role="tb_Car" EntitySet="tb_Car" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tb_Car_tb_Features" Association="Self.FK_tb_Car_tb_Features">
+      <End Role="tb_Features" EntitySet="tb_Features" />
+      <End Role="tb_Car" EntitySet="tb_Car" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tb_Car_tb_FuelStyle" Association="Self.FK_tb_Car_tb_FuelStyle">
+      <End Role="tb_FuelStyle" EntitySet="tb_FuelStyle" />
+      <End Role="tb_Car" EntitySet="tb_Car" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tb_Car_tb_Make" Association="Self.FK_tb_Car_tb_Make">
+      <End Role="tb_Make" EntitySet="tb_Make" />
+      <End Role="tb_Car" EntitySet="tb_Car" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tb_Car_tb_RepairList" Association="Self.FK_tb_Car_tb_RepairList">
+      <End Role="tb_RepairList" EntitySet="tb_RepairList" />
+      <End Role="tb_Car" EntitySet="tb_Car" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tb_Car_tb_Style" Association="Self.FK_tb_Car_tb_Style">
+      <End Role="tb_Style" EntitySet="tb_Style" />
+      <End Role="tb_Car" EntitySet="tb_Car" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tb_Contract_tb_Car" Association="Self.FK_tb_Contract_tb_Car">
+      <End Role="tb_Car" EntitySet="tb_Car" />
+      <End Role="tb_Contract" EntitySet="tb_Contract" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tb_User_tb_Permision" Association="Self.FK_tb_User_tb_Permision">
+      <End Role="tb_Permision" EntitySet="tb_Permision" />
+      <End Role="tb_User" EntitySet="tb_User" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tb_Timetable_tb_Shift1" Association="Self.FK_tb_Timetable_tb_Shift1">
+      <End Role="tb_Shift" EntitySet="tb_Shift" />
+      <End Role="tb_Timetable" EntitySet="tb_Timetable" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tb_Timetable_tb_User" Association="Self.FK_tb_Timetable_tb_User">
+      <End Role="tb_User" EntitySet="tb_User" />
+      <End Role="tb_Timetable" EntitySet="tb_Timetable" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

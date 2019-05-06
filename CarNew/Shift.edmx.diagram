@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="e78af1caec3c4b058ff166e7580d7100" Name="Diagram1">
+        <EntityTypeShape EntityType="ShiftModel.sysdiagram" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ShiftModel.tb_Car" Width="1.5" PointX="3" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ShiftModel.tb_Color" Width="1.5" PointX="0.75" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ShiftModel.tb_Contract" Width="1.5" PointX="5.25" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ShiftModel.tb_DriveTrain" Width="1.5" PointX="0.75" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ShiftModel.tb_Features" Width="1.5" PointX="0.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ShiftModel.tb_FuelStyle" Width="1.5" PointX="0.75" PointY="11.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ShiftModel.tb_Make" Width="1.5" PointX="0.75" PointY="13.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ShiftModel.tb_Permision" Width="1.5" PointX="5.75" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ShiftModel.tb_RepairList" Width="1.5" PointX="0.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ShiftModel.tb_Shift" Width="1.5" PointX="8" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ShiftModel.tb_Status" Width="1.5" PointX="0.75" PointY="18.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ShiftModel.tb_Style" Width="1.5" PointX="0.75" PointY="20.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ShiftModel.tb_Timetable" Width="1.5" PointX="10.25" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="ShiftModel.tb_User" Width="1.5" PointX="8" PointY="7" IsExpanded="true" />
+        <AssociationConnector Association="ShiftModel.FK_tb_Car_tb_Car" ManuallyRouted="false" />
+        <AssociationConnector Association="ShiftModel.FK_tb_Car_tb_Color" ManuallyRouted="false" />
+        <AssociationConnector Association="ShiftModel.FK_tb_Car_tb_DriveTrain" ManuallyRouted="false" />
+        <AssociationConnector Association="ShiftModel.FK_tb_Car_tb_Features" ManuallyRouted="false" />
+        <AssociationConnector Association="ShiftModel.FK_tb_Car_tb_FuelStyle" ManuallyRouted="false" />
+        <AssociationConnector Association="ShiftModel.FK_tb_Car_tb_Make" ManuallyRouted="false" />
+        <AssociationConnector Association="ShiftModel.FK_tb_Car_tb_RepairList" ManuallyRouted="false" />
+        <AssociationConnector Association="ShiftModel.FK_tb_Car_tb_Style" ManuallyRouted="false" />
+        <AssociationConnector Association="ShiftModel.FK_tb_Contract_tb_Car" ManuallyRouted="false" />
+        <AssociationConnector Association="ShiftModel.FK_tb_User_tb_Permision" ManuallyRouted="false" />
+        <AssociationConnector Association="ShiftModel.FK_tb_Timetable_tb_Shift1" ManuallyRouted="false" />
+        <AssociationConnector Association="ShiftModel.FK_tb_Timetable_tb_User" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ShiftModelStoreContainer" CdmEntityContainer="ShiftEntities">
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="ShiftModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_Car">
+      <EntityTypeMapping TypeName="ShiftModel.tb_Car">
+        <MappingFragment StoreEntitySet="tb_Car">
+          <ScalarProperty Name="IDCar" ColumnName="IDCar" />
+          <ScalarProperty Name="CarName" ColumnName="CarName" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="RentPrice" ColumnName="RentPrice" />
+          <ScalarProperty Name="KmRun" ColumnName="KmRun" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="ColorID" ColumnName="ColorID" />
+          <ScalarProperty Name="FeaturesID" ColumnName="FeaturesID" />
+          <ScalarProperty Name="StyleID" ColumnName="StyleID" />
+          <ScalarProperty Name="MakeID" ColumnName="MakeID" />
+          <ScalarProperty Name="FuelID" ColumnName="FuelID" />
+          <ScalarProperty Name="DriveTrainID" ColumnName="DriveTrainID" />
+          <ScalarProperty Name="MaintenanceDate" ColumnName="MaintenanceDate" />
+          <ScalarProperty Name="IDStatus" ColumnName="IDStatus" />
+          <ScalarProperty Name="Accessories" ColumnName="Accessories" />
+          <ScalarProperty Name="RepairList" ColumnName="RepairList" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_Color">
+      <EntityTypeMapping TypeName="ShiftModel.tb_Color">
+        <MappingFragment StoreEntitySet="tb_Color">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_Contract">
+      <EntityTypeMapping TypeName="ShiftModel.tb_Contract">
+        <MappingFragment StoreEntitySet="tb_Contract">
+          <ScalarProperty Name="IDContract" ColumnName="IDContract" />
+          <ScalarProperty Name="Customer" ColumnName="Customer" />
+          <ScalarProperty Name="Adress" ColumnName="Adress" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="CMND" ColumnName="CMND" />
+          <ScalarProperty Name="Deposit" ColumnName="Deposit" />
+          <ScalarProperty Name="DateRent" ColumnName="DateRent" />
+          <ScalarProperty Name="DateReturn" ColumnName="DateReturn" />
+          <ScalarProperty Name="IDUserCreate" ColumnName="IDUserCreate" />
+          <ScalarProperty Name="IDCar" ColumnName="IDCar" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_DriveTrain">
+      <EntityTypeMapping TypeName="ShiftModel.tb_DriveTrain">
+        <MappingFragment StoreEntitySet="tb_DriveTrain">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_Features">
+      <EntityTypeMapping TypeName="ShiftModel.tb_Features">
+        <MappingFragment StoreEntitySet="tb_Features">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_FuelStyle">
+      <EntityTypeMapping TypeName="ShiftModel.tb_FuelStyle">
+        <MappingFragment StoreEntitySet="tb_FuelStyle">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_Make">
+      <EntityTypeMapping TypeName="ShiftModel.tb_Make">
+        <MappingFragment StoreEntitySet="tb_Make">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_Permision">
+      <EntityTypeMapping TypeName="ShiftModel.tb_Permision">
+        <MappingFragment StoreEntitySet="tb_Permision">
+          <ScalarProperty Name="IDPermision" ColumnName="IDPermision" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_RepairList">
+      <EntityTypeMapping TypeName="ShiftModel.tb_RepairList">
+        <MappingFragment StoreEntitySet="tb_RepairList">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_Shift">
+      <EntityTypeMapping TypeName="ShiftModel.tb_Shift">
+        <MappingFragment StoreEntitySet="tb_Shift">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="From" ColumnName="From" />
+          <ScalarProperty Name="To" ColumnName="To" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_Status">
+      <EntityTypeMapping TypeName="ShiftModel.tb_Status">
+        <MappingFragment StoreEntitySet="tb_Status">
+          <ScalarProperty Name="IDStatus" ColumnName="IDStatus" />
+          <ScalarProperty Name="StatusName" ColumnName="StatusName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_Style">
+      <EntityTypeMapping TypeName="ShiftModel.tb_Style">
+        <MappingFragment StoreEntitySet="tb_Style">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_Timetable">
+      <EntityTypeMapping TypeName="ShiftModel.tb_Timetable">
+        <MappingFragment StoreEntitySet="tb_Timetable">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="IDUser" ColumnName="IDUser" />
+          <ScalarProperty Name="Datetime" ColumnName="Datetime" />
+          <ScalarProperty Name="IDShift" ColumnName="IDShift" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_User">
+      <EntityTypeMapping TypeName="ShiftModel.tb_User">
+        <MappingFragment StoreEntitySet="tb_User">
+          <ScalarProperty Name="IDUser" ColumnName="IDUser" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="IDPermision" ColumnName="IDPermision" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
